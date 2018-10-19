@@ -1,0 +1,6 @@
+tmp/
+*.log
+.idea/
+*.pyc
+__pycache__/
+__init__.py
