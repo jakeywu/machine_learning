@@ -24,15 +24,12 @@ class KNN(object):
         res = list()
         for dis in self.eachDistance[:k]:
             column = self.trainData.loc[int(dis[0])]
-            for class_name in self.trainData["className"]:
-                if class_name == column["className"]:
-                    res.append(class_name)
+            res.append(column["className"])
         return Counter(res).most_common(1)[0][0]
-        # return sorted(res.items(), key=lambda x: x[1], reverse=True)[0][0]
 
 
 if __name__ == "__main__":
     iris_dataset = LDS.loading_iris()
-    predict_data = [3.4, 3.9, 1.5, 0.4]
+    predict_data = [2.7, 0.1, 5.3, 4.9]
     knn = KNN(iris_dataset, predict_data)
     print("预测结果为{}".format(knn.predict(10)))
