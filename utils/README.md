@@ -6,3 +6,8 @@
 3. 每次合并，会产生一个新的符号，代表着n-gram字符
 4. 常见的n-grams字符(或者whole words)，最终会被合并到一个符号
 5. 最终符号词表大小=初始大小+合并操作次数。操作次数是算法唯一的超参数。
+
+##### [Demo实现](./common_algo.py)
+```
+python common_algo.py
+```
